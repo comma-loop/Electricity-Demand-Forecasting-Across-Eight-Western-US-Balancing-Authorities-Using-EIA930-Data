@@ -34,24 +34,6 @@ Notes on how the sources are used:
 - All timestamps are UTC time at end of hour. Local time is derived only for calendar features and for plots (Arizona's `America/Phoenix` does not observe daylight saving time; the other six BAs are on `America/Los_Angeles`).
 - CO2 intensity is computed by EIA from the generation mix, so it is a derived variable and not a driver of demand. The file does not document units, so results are reported in "source units".
 - The raw CSV files are not stored in this repository. Download them from EIA and place them in `data/raw/` before running the notebooks.
-## Repository structure
- 
-```
-.
-├── Notebook A.ipynb      # Data checks, SQL analysis, EDA, feature table (answers RQ1)
-├── Notebook B.ipynb      # Models, evaluation, operational analysis (answers RQ2 and RQ3)
-├── data/
-│   ├── raw/              # EIA-930 CSVs go here (not committed)
-│   └── processed/        # feat_8ba.parquet and manifest_8ba.json (output of Notebook A)
-├── sql/                  # SQL queries exported by the notebooks (features.sql and SQL 1 to 4)
-├── report/               # Result tables (CSV), figures, and validation logs
-├── tableau/              # Tableau dashboard
-└── requirements.txt
-```
- 
-Run **Notebook A first**. It writes the feature table and a manifest (BA list, time convention, target definition, train/test boundary, checksum). Notebook B reads the manifest, re-verifies the checksum and BA list, and does not choose BAs on its own. Both notebooks end with automated validation tables (27 checks in Notebook A and 20 in Notebook B; all PASS).
- 
-> The commentary inside the notebooks is written in Vietnamese. Table and column names, figures, and this README are in English.
  
 ## Research questions and results
  

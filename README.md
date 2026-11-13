@@ -140,7 +140,7 @@ The `tableau/` folder holds two connected dashboards: one for demand characteris
 - Leave-one-BA-out results say nothing about BAs outside these eight.
 - Software versions were only partly recorded (pandas 2.3.3, DuckDB 1.5.6).
 
-## Roadmap
+## Future Improvements
 
 - [ ] Add weather features (temperature) and a holiday calendar
 - [ ] Extend to a second year of data

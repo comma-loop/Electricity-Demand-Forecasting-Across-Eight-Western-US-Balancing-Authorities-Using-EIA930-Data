@@ -108,7 +108,7 @@ No clear evidence that they do. Adding four CO₂ features raised MAE from 271.9
 
 ---
 
-## Getting started
+## How To Run
 
 ```bash
 git clone https://github.com/comma-loop/Electricity-Demand-Forecasting-Across-Eight-Western-US-Balancing-Authorities-Using-EIA930-Data.git
